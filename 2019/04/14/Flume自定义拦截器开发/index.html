@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="##">
+<meta name="description" content="一.概述二.实现1.Maven导入123456&amp;lt;dependency&amp;gt;       &amp;lt;groupId&amp;gt;org.apache.flume&amp;lt;/groupId&amp;gt;       &amp;lt;artifactId&amp;gt;flume-ng-core&amp;lt;/artifactId&amp;gt;       &amp;lt;version&amp;gt;1.8.0&amp;lt;/version&amp;gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flume自定义拦截器开发">
 <meta property="og:url" content="http://yoursite.com/2019/04/14/Flume自定义拦截器开发/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="##">
+<meta property="og:description" content="一.概述二.实现1.Maven导入123456&amp;lt;dependency&amp;gt;       &amp;lt;groupId&amp;gt;org.apache.flume&amp;lt;/groupId&amp;gt;       &amp;lt;artifactId&amp;gt;flume-ng-core&amp;lt;/artifactId&amp;gt;       &amp;lt;version&amp;gt;1.8.0&amp;lt;/version&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-14T13:25:57.371Z">
+<meta property="og:updated_time" content="2019-04-14T13:32:31.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flume自定义拦截器开发">
-<meta name="twitter:description" content="##">
+<meta name="twitter:description" content="一.概述二.实现1.Maven导入123456&amp;lt;dependency&amp;gt;       &amp;lt;groupId&amp;gt;org.apache.flume&amp;lt;/groupId&amp;gt;       &amp;lt;artifactId&amp;gt;flume-ng-core&amp;lt;/artifactId&amp;gt;       &amp;lt;version&amp;gt;1.8.0&amp;lt;/version&amp;gt;">
 
 
 
@@ -329,7 +329,9 @@
       
 
       
-        <p>## </p>
+        <h1 id="一-概述"><a href="#一-概述" class="headerlink" title="一.概述"></a>一.概述</h1><h1 id="二-实现"><a href="#二-实现" class="headerlink" title="二.实现"></a>二.实现</h1><h2 id="1-Maven导入"><a href="#1-Maven导入" class="headerlink" title="1.Maven导入"></a>1.Maven导入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">       &lt;groupId&gt;org.apache.flume&lt;/groupId&gt;</span><br><span class="line">       &lt;artifactId&gt;flume-ng-core&lt;/artifactId&gt;</span><br><span class="line">       &lt;version&gt;1.8.0&lt;/version&gt;</span><br><span class="line">       &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">   &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-继承核心类Interceptor"><a href="#2-继承核心类Interceptor" class="headerlink" title="2.继承核心类Interceptor"></a>2.继承核心类Interceptor</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implements Interceptor</span><br></pre></td></tr></table></figure>
+<h2 id="3-重载Interceptor方法"><a href="#3-重载Interceptor方法" class="headerlink" title="3.重载Interceptor方法"></a>3.重载Interceptor方法</h2><p>核心方法：event(),处理逻辑都在这个方法中进行，如清洗过滤、添加数据到header中，等等</p>
 
       
     </div>
@@ -414,8 +416,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -459,6 +470,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-概述"><span class="nav-number">1.</span> <span class="nav-text">一.概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-实现"><span class="nav-number">2.</span> <span class="nav-text">二.实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Maven导入"><span class="nav-number">2.1.</span> <span class="nav-text">1.Maven导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-继承核心类Interceptor"><span class="nav-number">2.2.</span> <span class="nav-text">2.继承核心类Interceptor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-重载Interceptor方法"><span class="nav-number">2.3.</span> <span class="nav-text">3.重载Interceptor方法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
